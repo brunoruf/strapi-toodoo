@@ -11,8 +11,8 @@ jobs:
       - name: Deploy para meu host
         uses: easingthemes/ssh-deploy@main
         env:
-          ARGS: "-rlgoDzvc -i --delete"
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
           SOURCE: "var/www/html/websites/toodoo/admin"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
